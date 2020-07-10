@@ -11,6 +11,6 @@ Le but de ce projet est de collecter ces données (web scraping) puis de les met
 
 _Collection, analysis, and visualization of the decisions and judgements relating to Article 261bis of the Penal Code (anti-racist penal norm) from the various judicial bodies in Switzerland._
 
-Contact me at francois@delavyz.com for any questions or if you want to collaborate.
+_Contact me at francois@delavyz.com for any questions or if you want to collaborate._
 
 
