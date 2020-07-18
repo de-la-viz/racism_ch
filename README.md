@@ -24,7 +24,7 @@ Les autorités cantonales sont tenues de communiquer au Service de Renseignement
 
 ### Scraping des données
 
-Les données de tous les cas présents sur le [recuil de cas juridiques pour le droit pénal](https://www.ekr.admin.ch/prestations/f518.html) sont extraites par le scraper [/code/scraper.ipynb](https://github.com/de-la-viz/racism_ch/blob/master/code/scraper.ipynb) puis sauvées au format .csv ([/data/CFR_1995-2018.csv](https://github.com/de-la-viz/racism_ch/blob/master/data/CFR_1995-2018.csv)) et .json ([CFR_1995-2018.json](https://github.com/de-la-viz/racism_ch/blob/master/data/CFR_1995-2018.json)).   
+Les données de tous les cas présents sur le [recuil de cas juridiques pour le droit pénal](https://www.ekr.admin.ch/prestations/f518.html) sont extraites par le scraper [/code/scraper.ipynb](https://github.com/de-la-viz/racism_ch/blob/master/code/scraper.ipynb) puis sauvées au format .csv ([/data/CFR_1995-2018.csv](https://github.com/de-la-viz/racism_ch/blob/master/data/CFR_1995-2018.csv)) et .json ([/data/CFR_1995-2018.json](https://github.com/de-la-viz/racism_ch/blob/master/data/CFR_1995-2018.json)).   
 
 **Taille**: 11.3Mb (.csv)  
 **Nombre de cas**: 910 (1995-2018)  
