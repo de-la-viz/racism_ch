@@ -12,9 +12,9 @@ _Collection, analysis, and visualization of the decisions and judgements relatin
 
 _Since 1995 the Federal Commission against Racism (FCR) has been compiling a list of decisions and judgements relating to article 261bis of the Penal Code (anti-racist penal norm) from the various judicial bodies in Switzerland and making them available to the public and specialists in its [collection of legal cases](https://www.ekr.admin.ch/prestations/f269.html)._  
 
-_However, this database only allows consulting the cases one by one. It is not possible to obtain an overview other than the [some statistics presented](https://www.ekr.admin.ch/prestations/f272.html). These data are freely available, but upon request, the FCR is unable to issue them in tabular form for a technical and not a legal or legal reason. In this format, they are therefore of little use to the public._ 
+_However, this database only allows consulting the cases one by one. It is not possible to obtain another overview than [some statistics presented](https://www.ekr.admin.ch/prestations/f272.html). These data are freely available, but upon request, the FCR is unable to issue them in tabular form for a technical and not a legal reason. In this format, they are therefore of little use to the public._ 
 
-_The aim of this project is to collect these data (web scraping), analyze them, and communicate them to the public. The aim is to inform the public debate on racism in Switzerland._   
+_The goal of this project is to collect these data (web scraping), analyze them, and communicate them to the public. The aim is to inform the public debate on racism in Switzerland._   
 
 ---  
 
