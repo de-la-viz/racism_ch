@@ -8,7 +8,7 @@ Le but de ce projet est de collecter ces données (web scraping) puis de les met
 
 ---  
 
-_Collection, analysis, and visualization of the decisions and judgements relating to Article 261bis of the Penal Code (anti-racist penal norm) from the various judicial bodies in Switzerland._
+_Collection, analysis, and visualization of the decisions and judgments relating to Article 261bis of the Penal Code (anti-racist penal norm) from the various judicial bodies in Switzerland._
 
 _Since 1995 the Federal Commission against Racism (FCR) has been compiling a list of decisions and judgements relating to article 261bis of the Penal Code (anti-racist penal norm) from the various judicial bodies in Switzerland and making them available to the public and specialists in its [collection of legal cases](https://www.ekr.admin.ch/prestations/f269.html)._  
 
