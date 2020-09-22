@@ -14,7 +14,7 @@ _Since 1995 the Federal Commission against Racism (FCR) has been compiling a lis
 
 _However, this database only allows consulting the cases one by one. It is not possible to obtain another overview than [the few statistics presented](https://www.ekr.admin.ch/prestations/f272.html). These data are freely available, but upon request, the FCR is unable to issue them in tabular form - for a technical and not a legal reason. In this format, they are therefore of little use to the public._ 
 
-_The goal of this project is to collect these data (web scraping), analyze them, and communicate them to the public. With the aim to inform the public debate on racism in Switzerland._   
+_The goal of this project is to collect these data (web scraping), analyze them, and communicate them to the general public. With the aim to inform the public debate on racism in Switzerland._   
 
 ---  
 
