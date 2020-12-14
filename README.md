@@ -60,8 +60,7 @@ Les données de tous les cas présents sur le [recuil de cas juridiques pour le 
 
 Si vous avez un environnement python 3, vous pouvez utiliser [code/scraper.ipynb](https://github.com/de-la-viz/racism_ch/blob/master/code/scraper.ipynb). Le jupyter notebook ne requiert que _pandas_ et _scrapy_.   
 
-Alternativement, vous pouvez aussi utiliser l'image Docker suivante: docker run -p 9999:8888 -v "$PWD":/home/jovyan jupyter/scipy-notebook:17aba6048f44  
-Celle-ci est à lancer depuis le root directory de ce projet. [Source de l'image](https://github.com/jupyter/docker-stacks)
+Alternativement, vous pouvez aussi utiliser l'image Docker suivante: `docker run -p 9999:8888 -v "$PWD":/home/jovyan jupyter/scipy-notebook:17aba6048f44` [Source de l'image](https://github.com/jupyter/docker-stacks). Celle-ci est à lancer depuis le root directory de ce projet. 
 
 
 ## Work in progress ...
