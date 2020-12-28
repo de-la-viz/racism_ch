@@ -1,0 +1,186 @@
+---
+title: "Data Exploration"
+author: "François Delavy"
+date: "12/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# --- Environment
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(rio)
+library(stringr)
+
+# --- Data
+cases <- rio::import("../data/CFR_1995-2019.csv") %>%
+  mutate(year = stringr::str_sub(current_case, 1, 4)
+  ) %>%
+  mutate_if(is.character, list(~na_if(.,""))) # replace empty strings with NAs
+
+# glimpse(cases)
+# head(cases)
+
+# --- Functions
+
+
+```
+
+## Key Points
+
+Quite some cleaning needed, in particular to group the categories. The protection object and authority are not usable because there are too many missing values. Need some checks to be sure that what we have correponds to the online database. If we want to do something with the decisions, we will have to extract it from the _html_text_.   
+
+How to treat the original/current cases?  
+
+### Cleanliness
+* Too much missing data for the _protection object_,_specific questions_, and _authority_
+* Need to work on grouping the categories of _authors_, _victims_, _means_, _social environment_, _ideology_. For readibility, because some overlap. 
+
+### Observations
+
+
+### Ideas, directions
+* Extract the _decision_ from _html_text_.  
+* Work with the original or current cases?  
+
+## Summary Figures
+
+There are `r dim(cases)[1]` cases in the dataset, which spans from year `r min(cases$year)` to `r max(cases$year)`. However, there are "only" `r cases$original_case %>% unique() %>% length()` original cases, because second instance judgments do have a new case number, but not a new entry (URL)....   
+The following figures were obtained by counting all the cases (i.e. _current_case_).  
+
+```{r cases_per_year, fig.width=10, fig.height=3}
+
+cases %>% group_by(year) %>% count() %>% ggplot(aes(x = year, y = n, group = 1)) +
+  geom_line() +
+  geom_point() +
+  theme_minimal() +
+  labs(title = "Number of cases per year",
+       x = "",
+       y = "")
+  
+
+```
+
+```{r cases_by_canton}
+
+cases %>% group_by(location) %>% count() %>% ggplot(aes(x = reorder(location, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Number of cases per canton",
+       x = "",
+       y = "")
+
+```
+
+Note: there is one case where the location is "Suisse", and one where it is missing.     
+Idea: could import cantonal population data to show discrepancies.  
+
+```{r protection-objects}
+
+cases %>% group_by(protection_object) %>% count() %>% ggplot(aes(x = reorder(protection_object, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "The protection object is missing most of the time...",
+       x = "",
+       y = "")
+
+```
+
+**TO DO**: Be sure that is also appear to be the case on the online ekr.admin.ch database, and that is corresponds to what is presented in the stats.   
+
+```{r specific_questions}
+
+cases %>% group_by(specific_questions) %>% count() %>% ggplot(aes(x = reorder(specific_questions, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Specific questions",
+       x = "",
+       y = "")
+
+```
+
+```{r authority}
+
+cases %>% group_by(authority) %>% count() %>% ggplot(aes(x = reorder(authority, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Authority",
+       x = "",
+       y = "")
+
+```
+
+
+```{r authors}
+
+cases %>% group_by(authors) %>% count() %>% ggplot(aes(x = reorder(authors, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Authors",
+       x = "",
+       y = "")
+
+```
+
+
+```{r victims, fig.height=7, fig.width=8}
+
+cases %>% group_by(victims) %>% count() %>% ggplot(aes(x = reorder(victims, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Victims",
+       x = "",
+       y = "")
+
+```
+
+Note: There is 1 "Déclarations orales; Gestes". It should be in the "means" column. **TO DO:** check that also error on database online and correct it.  
+
+```{r means, fig.height=8, fig.width=8}
+
+cases %>% group_by(means) %>% count() %>% ggplot(aes(x = reorder(means, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Means",
+       x = "",
+       y = "")
+
+```
+
+```{r social_env}
+
+cases %>% group_by(social_env) %>% count() %>% ggplot(aes(x = reorder(social_env, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Social environment",
+       x = "",
+       y = "")
+
+```
+
+
+```{r ideology, fig.height=7}
+
+cases %>% group_by(ideology) %>% count() %>% ggplot(aes(x = reorder(ideology, n), y = n)) +
+  geom_col() +
+  theme_minimal() +
+  coord_flip() +
+  labs(title = "Ideology",
+       x = "",
+       y = "")
+
+```
+
+
+
